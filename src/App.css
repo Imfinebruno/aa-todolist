@@ -1,38 +1,151 @@
-.App {
-  text-align: center;
+.App{
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100%;
+    background: #0E0E0E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container{
+    height: 80%;
+    width: 60%;
+    background: #1E1E1E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* background: #fff; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+
+/* ABA DA DIREITA */
+
+.aba-esquerda{
+    width: calc(100% / 3);
+    height: 100%;
+    /* background-color: aliceblue; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+
+    border-right: #0E0E0E 1px solid;
+}
+.nome-user{
+    margin-top: 30px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.bio-user{
+    text-align: center;
+    margin: 10px 10px 0px 10px;
+    font-weight: thin;
+}
+.links-user{
+    text-align: center;
+    margin-top: 30px;
+    font-weight: bold;
+    color:#fff
+}
+.links-user li{
+    margin-bottom: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+
+/* ABA DA DIREITA */
+
+.aba-direita{
+    width: calc((100%/3) * 2);
+    height: 100%;
+    /* background-color: aliceblue; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    position: relative;
+
+    border-right: #0E0E0E 1px solid;
+}
+.titulo{
+    font-size: 24px;
+    font-weight: bold;
+}
+.tarefas-container{
+    height: 100%;
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.lista-dia, .lista-noite{
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    border-right: #0E0E0E 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: auto;
+    /* background-color: tomato; */
+}
+.lua-icon, .sol-icon{
+    width: 100px;
+    right: 87%;
+    top: 95.7%;
+    position: absolute;
 }
 
-.App-link {
-  color: #61dafb;
+h2{
+    font-size: 24px;
+    font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.lista{
+    margin-top: 50px;
+    font-size: 20px;
+}
+.lista ul{
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+}
+
+.input-add{
+    margin: 0 auto;
+}
+.lista button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+input{
+    border: none;
+    border-bottom: #fff;
+    background: none;
+    box-shadow: none;
+    resize: none;
+    color: #fff;
+    font-size: 16px;
+}
+input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.item{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 30px 0px 30px;
+    margin-bottom: 30px;
+    text-align: start;
 }
